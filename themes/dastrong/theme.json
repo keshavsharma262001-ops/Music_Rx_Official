@@ -1,0 +1,263 @@
+{
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#000000",
+					"name": "Background",
+					"slug": "background-primary"
+				},
+				{
+					"color": "#1a1a1a",
+					"name": "Background",
+					"slug": "background-secundary"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Background-white",
+					"slug": "text-color"
+				},
+				{
+					"color": "#f75d00",
+					"name": "Background-red",
+					"slug": "color"
+				},
+				{
+					"color": " #ffffff80",
+					"name": "alpha-white",
+					"slug": "alpha-white"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "620px",
+			"wideSize": "1000px"
+		},
+		"spacing": {
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./public/fonts/geist/geist-900-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./public/fonts/geist/geist-700-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": [
+								"file:./public/fonts/geist/geist-800-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "200",
+							"src": [
+								"file:./public/fonts/geist/geist-200-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./public/fonts/geist/geist-300-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./public/fonts/geist/geist-500-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./public/fonts/geist/geist-400-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./public/fonts/geist/geist-600-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "Geist",
+							"fontStyle": "normal",
+							"fontWeight": "100",
+							"src": [
+								"file:./public/fonts/geist/geist-100-normal.ttf"
+							]
+						}
+					],
+					"fontFamily": "Geist",
+					"name": "Geist",
+					"slug": "geist"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-800-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-700-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-300-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-500-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-400-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-600-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "100",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-100-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-900-normal.ttf"
+							]
+						},
+						{
+							"fontFamily": "\"Geist Mono\"",
+							"fontStyle": "normal",
+							"fontWeight": "200",
+							"src": [
+								"file:./public/fonts/geist-mono/geist-mono-200-normal.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Geist Mono\"",
+					"name": "Geist Mono",
+					"slug": "geist-mono"
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background-primary)",
+			"text": "var(--wp--preset--color--text-color)"
+		},
+		"css": ".list-hero{\nwidth: 20%;\n}\n.marquee-sticky{\nwidth: 100%;\n}\n.testimonial-wrapper {\nwidth: 400px;\n}\n.title-pricing  {\nwidth: 800px;\n}\n.title-contact  {\nwidth: 700px;\n}\n\n.img-hero {\n  /* animação controlada pelo scroll */\n      animation: grayscaleAnim linear both;\n      animation-timeline: scroll();\n      animation-range: 0 90vh; \n    }\n\n    @keyframes grayscaleAnim {\n      from {\n        filter: grayscale(0%);\n    transform: scale(1);\n      }\n      to {\n        filter: grayscale(100%);\n      transform: scale(0.8);\n      }\n    }\n\n/* Mobile */\n@media (max-width: 768px) {\n    .text_mobile {\n        font-size: 32px !important;\n    }\n\n    .img-hero {\n        margin: 0 !important;\n    }\n}\n\n/* Tablet */\n@media (min-width: 769px) and (max-width: 1024px) {\n    .text_mobile {\n        font-size: 32px !important;\n    }\n\n    .img-hero {\n        margin: 0 !important;\n    }\n}\n.header_r {\nposition: absolute;\n    right: 60px; }\n\n.hover_text {\n    margin-top: -60px;\n    position: absolute;\n}",
+		"elements": {
+			"button": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geist)"
+				}
+			},
+			"caption": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geist)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geist)"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--text-color)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geist)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--geist)"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json"
+}
