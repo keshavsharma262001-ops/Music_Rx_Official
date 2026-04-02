@@ -88,3 +88,12 @@ body {
     transition: none;
   }
 }
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+cursor: pointer;
+  transform: scale(1.1);
+}

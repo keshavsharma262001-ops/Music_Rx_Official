@@ -62,8 +62,22 @@ function mrx_custom_form() {
 <script>
 document.getElementById('mrx-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    var formData = new FormData(this);
+
+    var form = this;
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var responseDiv = document.getElementById('mrx-response');
+
+    // Stop multiple submits until server response is shown
+    if (submitBtn.disabled) {
+        return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.dataset.originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    responseDiv.innerHTML = '';
+
+    var formData = new FormData(form);
     formData.append('action', 'mrx_handle_form');
     
     fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
@@ -83,17 +97,20 @@ document.getElementById('mrx-form').addEventListener('submit', function(e) {
         }
     })
     .then(data => {
-        var responseDiv = document.getElementById('mrx-response');
         if(data.success) {
             responseDiv.innerHTML = '<p class="mrx-success">✅ ' + data.data + '</p>';
-            document.getElementById('mrx-form').reset();
+            form.reset();
         } else {
             responseDiv.innerHTML = '<p class="mrx-error">❌ ' + data.data + '</p>';
         }
     })
     .catch(error => {
         console.error('Form error:', error);
-        document.getElementById('mrx-response').innerHTML = '<p class="mrx-error">❌ Error submitting form: ' + error.message + '</p>';
+        responseDiv.innerHTML = '<p class="mrx-error">❌ Error submitting form: ' + error.message + '</p>';
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = submitBtn.dataset.originalText || 'Send Inquiry';
     });
 });
 </script>
@@ -196,6 +213,18 @@ function mrx_handle_form_submission() {
         update_post_meta($post_id, 'phone', $phone);
         update_post_meta($post_id, 'message', $message);
         update_post_meta($post_id, 'date', current_time('mysql'));
+
+        // Send admin notification email with inquiry details.
+        $admin_email = get_option('admin_email');
+        $subject = 'New Inquiry Received';
+        $body = "A new inquiry has been submitted.\n\n";
+        $body .= "Name: " . $name . "\n";
+        $body .= "Phone: " . $phone . "\n";
+        $body .= "Message: " . $message . "\n";
+        $body .= "Date: " . current_time('mysql') . "\n";
+        $body .= "Inquiry ID: " . $post_id . "\n";
+
+        wp_mail($admin_email, $subject, $body);
         
         wp_send_json_success('Message Sent Successfully!');
     } else {
